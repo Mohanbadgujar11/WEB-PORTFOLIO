@@ -1,0 +1,160 @@
+/* Reusable scroll animation classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+* {
+    margin: 0%;
+    padding: 0%;
+}
+/* style for navbar */
+
+body {
+    background-color: #030121;
+    font-family: Arial, sans-serif;
+}
+
+nav{
+    display: flex   ;
+    /* height:1000vh ; */
+}
+nav .left{
+    color: rgb(14, 10, 95);
+}
+nav.right{
+    margin-left: 600px;
+    color: rgb(110, 20, 20);
+    text-decoration: none;
+}
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            width: 100%;
+            background: #121547;
+            padding: 20px 100px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav .left {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        nav .right a {
+            color: #697489;
+            font-weight: 500;
+            margin-left: 40px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        nav .right a:hover {
+            color: #ff014f;
+            font-size: large;
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+/* Media Queries for Header Responsiveness */
+/* style for media query */
+@media (max-width: 725px) {
+    /* style for header */
+    header {
+        padding: 10px 20px;
+    }
+
+    nav {
+        /* flex-direction: row; */
+        justify-content: space-between;
+        background-color: #121547; /* Add a background color */
+        padding: 10px; /* Add some padding */
+        align-items: center;
+        height: auto;
+        width: auto;
+    }
+
+    nav .right {
+        display: none; /* Hide the navigation links */
+        flex-direction: column;
+        position: absolute;
+        /* height: auto;
+        width: auto; */
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #121547;
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .right a {
+        display: block;
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    nav .right.show {
+        display: flex; /* Show the menu when this class is added */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+}
+/* style for image */
+        img {
+            border-radius: 50%;
+        }
+
+/* Media Queries for Header Responsiveness */
+        main {
+            max-width: 1500px;
+            margin: auto;
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+
+
+
+
+
+
+
+            
+        

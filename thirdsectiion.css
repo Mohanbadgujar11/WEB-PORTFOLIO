@@ -1,0 +1,154 @@
+/* Projects Section (new) */
+/* style for project section */
+        .projects-section {
+            background: linear-gradient(120deg, #f5f5f5 60%, #e0e0e0 100%);
+            padding: 80px 0 60px 0;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto; /* Allow height to be determined by content */
+        }
+
+        /* style for project title */.projects-title {
+            font-size: 40px;
+            color: #ff014f;
+            margin-bottom: 40px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #fff2;
+            animation: fadeInDown 1s;
+        }
+
+        .projects-grid {
+            /* style for project grid */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 36px;
+            width: 92%;
+            max-width: 1200px;
+        }
+
+        .project-card {
+            /* style for project card */
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+            padding: 36px 24px 28px 24px;
+            text-align: left;
+            transition: transform 0.5s cubic-bezier(.22, 1, .36, 1), box-shadow 0.5s, opacity 0.5s;
+            opacity: 0;
+            transform: translateY(60px) scale(0.95);
+            position: relative;
+            overflow: hidden;
+            display: flex; /* Use flexbox for better content alignment */
+            flex-direction: column; /* Stack content vertically */
+        }
+
+        .project-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .project-card:hover {
+            /* style for project card hover */
+            transform: translateY(-10px) scale(1.04) rotate(-1deg);
+            box-shadow: 0 12px 32px rgba(255, 1, 79, 0.13);
+        }
+
+        .project-title {
+            /* style for project title */
+            font-size: 24px;
+            color: #121547;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+/* style for project disc */
+        .project-desc {   
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 18px;
+            flex-grow: 1; /* Allow description to take available space */
+        }
+
+        .project-link {
+            color: #ff014f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .project-link:hover {
+            color: #121547;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive for projects */
+        @media (max-width: 900px) {
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @keyframes autoDisplayAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .left{
+            animation: autoDisplayAnimation both;
+            animation-timeline: view(70% 50%);
+        }
+        .right{
+            animation: autoDisplayAnimation both;
+            animation-timeline: view(70% 50%);
+        }
+
+        @media (max-width: 768px) {
+            .projects-section {
+                /* media queries */
+                padding: 60px 20px 40px 20px;
+            }
+/* media queries */
+            .projects-title {
+                font-size: 32px;
+                text-align: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .projects-title {
+                font-size: 28px;
+            }
+        }
+        
+
+
+@media (max-width: 320px) {
+    .projects-grid {
+        width: 100%;
+    }
+}

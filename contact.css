@@ -1,0 +1,88 @@
+ /* Contact Section */
+        .contact-section {
+            background: #9899b0;
+            color: #fff;
+            padding: 70px 0 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-title {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #ff014f;
+            letter-spacing: 2px;
+            animation: fadeInDown 1s;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            color: #121547;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+            padding: 36px 28px 28px 28px;
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            animation: fadeInUp 1.2s;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            border: none;
+            outline: none;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 16px;
+            color: #121547;
+            transition: box-shadow 0.3s, background 0.3s;
+            resize: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            background: #e0e0e0;
+            box-shadow: 0 0 0 2px #ff014f44;
+        }
+
+        .contact-form label {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: #121547;
+        }
+
+        .contact-form button {
+            background: linear-gradient(90deg, #ff014f 60%, #121547 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #121547 60%, #ff014f 100%);
+            transform: scale(1.04);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
